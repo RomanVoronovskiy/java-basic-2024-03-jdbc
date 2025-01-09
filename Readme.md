@@ -25,12 +25,11 @@
 1) Получение всех пользователей, для каждого получение всех его ролей - getAll()
 2) Проверить, является ли пользователь администратором - isAdmin(int userId)
 
-## JDBC
+##  Docker
+Для поднятия контейнера postgreSql необходимо выполнить команду в терминале intelijIdea:
 
-- Соединение с БД
-```java
-try(Connection connection = DriverManager.getConnection(DATABASE_URL, "postgres", "postgres")) 
+```bash
+docker-compose up -d
 ```
 
-- Создание классов сущностей User и Role
-- Запрашиваем сведения о пользователях и ролях, создаем объекты User и Role
+Для установления соединения используем данные из docker-compose.yaml файла (логин/пароль)
